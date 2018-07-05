@@ -315,4 +315,3 @@ Fully tested and covered, you can rely on this logging framework for your projec
 
 
 
-# Read this file

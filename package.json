@@ -1,0 +1,19 @@
+{
+  "name": "colorized-logger",
+  "version": "1.0.0",
+  "description": "Simple instantiable logger that prepends a customizable colorized message to every log message per logger instance.",
+  "main": "src/colorized-logger.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/*.spec.js",
+    "coverage": "./node_modules/.bin/nyc --reporter=html ./node_modules/.bin/mocha test/*.spec.js",
+    "docs": "./node_modules/.bin/javadoc -i src/colorized-logger.js -o README.md -f markdown"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "javadoc": "^1.0.3",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2"
+  }
+}
