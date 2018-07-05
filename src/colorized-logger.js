@@ -190,11 +190,14 @@ class ColorizedLogger {
      *
      * ----
      * 
-     * ### **ColorizedLogger#callback**
+     * ### **ColorizedLogger#callback(message:String, parameters:Array<Any>)**
      * 
      * @type `{Function}`
+     * @parameter `{String} message`. Plain text of the log.
+     * @parameter `{Array<Any>} parameters`. Data passed to the `ColorizedLogger#log(...)` call, without modifications.
      * @returns `{Any}`
      * @description Callback called as return statement by the `ColorizedLogger#log(...)` call. It is defined in the constructor call (parameter 3).
+     * The parameters will be injected when the `ColorizedLogger#log(...)` is called.
      *
      */
     this.callback = callback;

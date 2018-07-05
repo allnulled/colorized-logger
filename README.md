@@ -211,14 +211,19 @@ returned by this callback, is returned by the `ColorizedLogger#log(...)` call. B
 
 ----
 
-### **ColorizedLogger#callback**
+### **ColorizedLogger#callback(message:String, parameters:Array<Any>)**
 
 
 **Type:** `{Function}`
 
+**Parameter:** `{String} message`. Plain text of the log.
+
+**Parameter:** `{Array<Any>} parameters`. Data passed to the `ColorizedLogger#log(...)` call, without modifications.
+
 **Returns:** `{Any}`
 
 **Description:** Callback called as return statement by the `ColorizedLogger#log(...)` call. It is defined in the constructor call (parameter 3).
+The parameters will be injected when the `ColorizedLogger#log(...)` is called.
 
 
 
@@ -315,4 +320,3 @@ Fully tested and covered, you can rely on this logging framework for your projec
 
 
 
-# Read this file
