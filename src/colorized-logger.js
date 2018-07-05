@@ -30,10 +30,10 @@
  * 
  * // Step 3: use your new ColorizedLogger instance
  * 
- * if(debugLogger("Something")) {
- *   debugLogger("Always will return true because of the callback: the message will always start with '[debug]'.");
+ * if(debugLogger.log("Something")) {
+ *   debugLogger.log("Always will return true because of the callback: the message will always start with '[debug]'.");
  * } else {
- *   debugLogger("Never executed");
+ *   debugLogger.log("Never executed");
  * }
  * 
  * ```
@@ -45,7 +45,7 @@
 const chalk = require("chalk");
 
 /**
- * ### **`ColorizedLogger = require("colorized-logger").ColorizedLogger`**
+ * ### **ColorizedLogger = require("colorized-logger").ColorizedLogger**
  * 
  * @type `{Class}`
  * @description Class used to instantiate easily and fast new loggers with colorized prepended message, and configurable returned callbacks.
@@ -56,7 +56,7 @@ class ColorizedLogger {
    *  
    * ---- 
    *  
-   * ### **`new ColorizedLogger(message:String, styles:Array<String>, callback:Function)`**
+   * ### **new ColorizedLogger(message:String, styles:Array<String>, callback:Function)**
    * 
    * @type `{Constructor}`
    * @parameter `{String} message`. Message to be prepended in every `ColorizedLogger#log(...)` call.
@@ -166,7 +166,7 @@ class ColorizedLogger {
      *
      * ----
      * 
-     * ### **`ColorizedLogger#message`**
+     * ### **ColorizedLogger#message**
      * 
      * @type `{String}`
      * @description Message to be prepended on every `ColorizedLogger#log(...)` message logged. It is defined in the constructor call (parameter 1).
@@ -178,7 +178,7 @@ class ColorizedLogger {
      *
      * ----
      * 
-     * ### **`ColorizedLogger#styles`**
+     * ### **ColorizedLogger#styles**
      * 
      * @type `{Array<String>}`
      * @description Styles to be used on the prepended message by the `ColorizedLogger#log(...)` call. It is defined in the constructor call (parameter 2).
@@ -190,7 +190,7 @@ class ColorizedLogger {
      *
      * ----
      * 
-     * ### **`ColorizedLogger#callback`**
+     * ### **ColorizedLogger#callback**
      * 
      * @type `{Function}`
      * @returns `{Any}`
@@ -203,7 +203,7 @@ class ColorizedLogger {
    * 
    * ----
    * 
-   * ### **`ColorizedLogger#log(...args:Any)`**
+   * ### **ColorizedLogger#log(...args:Any)**
    * 
    * @type `{Method}`
    * @parameter `{Any} ...args`. Pass any type of data. Each item passed will be stringified (unless it is already a `{String}`) and concatenated in the same log message. Functions are also accepted, and their inner code will be printed.
@@ -237,7 +237,7 @@ class ColorizedLogger {
    * 
    * ----
    * 
-   * ### **`ColorizedLogger.create(message:String, styles:Array<String>, callback:Function)`**
+   * ### **ColorizedLogger.create(message:String, styles:Array<String>, callback:Function)**
    * 
    * @type `{Static method}`
    * @returns `{ColorizedLogger}`
@@ -251,7 +251,7 @@ class ColorizedLogger {
    *  
    * ----
    * 
-   * ### **`ColorizedLogger.stringify(data:Any, beautify:Boolean)`**
+   * ### **ColorizedLogger.stringify(data:Any, beautify:Boolean)**
    * 
    * @type `{Static method}`
    * @parameter `{String} data`. The data to be stringified.

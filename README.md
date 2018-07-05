@@ -31,10 +31,10 @@ const debugLogger = new ColorizedLogger("[debug]", ["green", "bold", "underline"
 
 // Step 3: use your new ColorizedLogger instance
 
-if(debugLogger("Something")) {
- debugLogger("Always will return true because of the callback: the message will always start with '[debug]'.");
+if(debugLogger.log("Something")) {
+ debugLogger.log("Always will return true because of the callback: the message will always start with '[debug]'.");
 } else {
- debugLogger("Never executed");
+ debugLogger.log("Never executed");
 }
 
 ```
@@ -47,7 +47,7 @@ if(debugLogger("Something")) {
 
  
 
-### **`ColorizedLogger = require("colorized-logger").ColorizedLogger`**
+### **ColorizedLogger = require("colorized-logger").ColorizedLogger**
 
 
 **Type:** `{Class}`
@@ -62,7 +62,7 @@ if(debugLogger("Something")) {
 
 ---- 
 
-### **`new ColorizedLogger(message:String, styles:Array<String>, callback:Function)`**
+### **new ColorizedLogger(message:String, styles:Array<String>, callback:Function)**
 
 
 **Type:** `{Constructor}`
@@ -179,7 +179,7 @@ returned by this callback, is returned by the `ColorizedLogger#log(...)` call. B
 
 ----
 
-### **`ColorizedLogger#message`**
+### **ColorizedLogger#message**
 
 
 **Type:** `{String}`
@@ -195,7 +195,7 @@ returned by this callback, is returned by the `ColorizedLogger#log(...)` call. B
 
 ----
 
-### **`ColorizedLogger#styles`**
+### **ColorizedLogger#styles**
 
 
 **Type:** `{Array<String>}`
@@ -211,7 +211,7 @@ returned by this callback, is returned by the `ColorizedLogger#log(...)` call. B
 
 ----
 
-### **`ColorizedLogger#callback`**
+### **ColorizedLogger#callback**
 
 
 **Type:** `{Function}`
@@ -228,7 +228,7 @@ returned by this callback, is returned by the `ColorizedLogger#log(...)` call. B
 
 ----
 
-### **`ColorizedLogger#log(...args:Any)`**
+### **ColorizedLogger#log(...args:Any)**
 
 
 **Type:** `{Method}`
@@ -248,7 +248,7 @@ Finally, it returns what `ColorizeLogger#callback(fullLoggedMessageAsPlainText, 
 
 ----
 
-### **`ColorizedLogger.create(message:String, styles:Array<String>, callback:Function)`**
+### **ColorizedLogger.create(message:String, styles:Array<String>, callback:Function)**
 
 
 **Type:** `{Static method}`
@@ -265,7 +265,7 @@ Finally, it returns what `ColorizeLogger#callback(fullLoggedMessageAsPlainText, 
 
 ----
 
-### **`ColorizedLogger.stringify(data:Any, beautify:Boolean)`**
+### **ColorizedLogger.stringify(data:Any, beautify:Boolean)**
 
 
 **Type:** `{Static method}`
