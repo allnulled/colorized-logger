@@ -49,4 +49,12 @@ describe("ColorizedLogger API", function() {
 		]);
 		done();
 	});
+	it("has special support for Error objects", function(done) {
+		var logger = ColorizedLogger.create("[error-support-demo]", ["red", "bold", "underline", "bgYellow"]);
+		logger.log("Some errors", new Error({
+			name: "NameOfTheError",
+			message: "Message of the error"
+		}));
+		done();
+	});
 });
