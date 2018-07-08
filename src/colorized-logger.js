@@ -269,6 +269,9 @@ class ColorizedLogger {
     return function(obj, beautify = true) {
       var replacer = "";
       var indent = 0;
+      if(obj instanceof Error) {
+        return obj;
+      }
       if (beautify) {
         replacer = null;
         indent = 2;
