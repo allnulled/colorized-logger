@@ -238,9 +238,10 @@ class ColorizedLogger {
       }
     });
     console.log(colorFn(this.message) + " " + msg);
+    var index = 0;
     if(hasErrors) {
       console.log(this.message + " The following errors were logged:");
-      hasErrors.forEach((error) => console.log("(*) Error " + index + ":", error));
+      hasErrors.forEach((error) => console.log("(*) Error " + (++index) + ":", error));
     }
     return this.callback(this.message + " " + msg, args);
   }
