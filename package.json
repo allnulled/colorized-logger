@@ -1,6 +1,6 @@
 {
   "name": "colorized-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple instantiable logger that prepends a customizable colorized message to every log message per logger instance.",
   "main": "src/colorized-logger.js",
   "scripts": {
@@ -30,5 +30,14 @@
     "url": "https://github.com/allnulled/colorized-logger/issues"
   },
   "homepage": "https://github.com/allnulled/colorized-logger#readme",
-  "keywords": ["logger", "logging", "log", "framework", "simple", "minimal", "color", "colorized"]
+  "keywords": [
+    "logger",
+    "logging",
+    "log",
+    "framework",
+    "simple",
+    "minimal",
+    "color",
+    "colorized"
+  ]
 }
