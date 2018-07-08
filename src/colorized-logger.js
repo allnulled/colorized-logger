@@ -244,7 +244,7 @@ class ColorizedLogger {
       hasErrors.forEach((error) => console.log("(*) " + colorFn("Error " + (++index) + ":"), error));
       console.log();
     }
-    return this.callback(this.message + " " + msg, args);
+    return this.callback(this.message + " " + msg, args, hasError);
   }
   /**
    * 
