@@ -4,7 +4,7 @@
 # colorized-logger
 
 
-![](https://img.shields.io/badge/colorized--logger-v1.0.2-green.svg) ![](https://img.shields.io/badge/test-passing-green.svg) ![](https://img.shields.io/badge/coverage-100%25-green.svg) ![](https://img.shields.io/badge/stable-100%25-green.svg)
+![](https://img.shields.io/badge/colorized--logger-v1.0.3-green.svg) ![](https://img.shields.io/badge/test-passing-green.svg) ![](https://img.shields.io/badge/coverage-100%25-green.svg) ![](https://img.shields.io/badge/stable-100%25-green.svg)
 
 
 

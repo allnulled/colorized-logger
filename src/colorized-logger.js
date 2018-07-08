@@ -3,7 +3,7 @@
  * # colorized-logger
  *
  *
- * ![](https://img.shields.io/badge/colorized--logger-v1.0.2-green.svg) ![](https://img.shields.io/badge/test-passing-green.svg) ![](https://img.shields.io/badge/coverage-100%25-green.svg) ![](https://img.shields.io/badge/stable-100%25-green.svg)
+ * ![](https://img.shields.io/badge/colorized--logger-v1.0.3-green.svg) ![](https://img.shields.io/badge/test-passing-green.svg) ![](https://img.shields.io/badge/coverage-100%25-green.svg) ![](https://img.shields.io/badge/stable-100%25-green.svg)
  *
  *
  *
@@ -239,10 +239,8 @@ class ColorizedLogger {
     });
     console.log(colorFn(this.message) + " " + msg);
     var index = 0;
-    if(hasErrors) {
-      console.log();
+    if(hasErrors.length !== 0) {
       hasErrors.forEach((error) => console.log("(*) " + colorFn("Error " + (++index) + ":"), error));
-      console.log();
     }
     return this.callback(this.message + " " + msg, args, hasErrors);
   }
@@ -279,9 +277,6 @@ class ColorizedLogger {
     return function(obj, beautify = true) {
       var replacer = "";
       var indent = 0;
-      if(obj instanceof Error) {
-        return obj;
-      }
       if (beautify) {
         replacer = null;
         indent = 2;
