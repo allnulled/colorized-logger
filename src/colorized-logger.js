@@ -222,6 +222,7 @@ class ColorizedLogger {
     });
     var msg = "";
     var counter = 1;
+    var hasErrors = [];
     args.forEach((arg) => {
       if (args.length > 1) {
         msg += ((counter !== 1) ? " " : ""); // + "(" + counter + ") ";
@@ -229,11 +230,18 @@ class ColorizedLogger {
       counter++;
       if (typeof arg === "string") {
         msg += arg;
+      } else if(arg instanceof Error) {
+        msg += "** Error " + (hasErrors.length+1) + " **";
+        hasErrors.push(arg);
       } else {
         msg += ColorizedLogger.stringify(arg);
       }
     });
     console.log(colorFn(this.message) + " " + msg);
+    if(hasErrors) {
+      console.log(this.message + " The following errors were logged:");
+      hasErrors.forEach((error) => console.log("(*) Error " + index + ":", error));
+    }
     return this.callback(this.message + " " + msg, args);
   }
   /**
