@@ -1,6 +1,6 @@
 {
   "name": "colorized-logger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple instantiable logger that prepends a customizable colorized message to every log message per logger instance.",
   "main": "src/colorized-logger.js",
   "scripts": {
